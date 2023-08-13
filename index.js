@@ -1,55 +1,8 @@
-// //SetUp
-// // mkdir file-system-api-Day39
-// // cd file-system-api-Day39
-// // npm init -y  //New project initialize with NPM
-// // npm install express
-
-
-// //Import required modules using require function
-// const express = require('express');    // import the express module framework for nodejs
-// const app = express();   // define routes, middleware,behaviour of HTTP methods like GET, POST, PUT 
-// const fs = require('fs'); //filesystem module
-// const PORT = 3009; //define server PORT
-// const path = require('path');  // Import the path module for handling file paths
-// const dirName = path.join(__dirname, 'timestamp');
-
-
-// // Middleware to parse JSON data
-// //  client sends data to your server inJSON data and transforms it into a JavaScript object for route handlers)
-// // Without the express.json() middleware, you would need to manually parse the incoming data using something like JSON.parse(req.body)
-// app.use(express.json());
-
-
-// // Endpoint to create a text file
-// //req to access request information and res to send a response
-
-// app.get("/",(req, res)=>{
-//     res.send("Hey Gokul this is my first server");
-// })
-
-// app.get("/date-time",(req, res)=>{
-//     let date = new Date();
-//     let currentTimeStamp = date.toUTCString().slice(0, -3);
-//     let content = `The last updated timestamp: ${currentTimeStamp}`
-//     //let changedTime = currentTimeStamp.split(/[ ,:]+/).join("");
-//     let changedTime = currentTimeStamp.split(" ").join("").split(",").join("").split(":").join("");
-//     console.log(dirName)
-//     fs.writeFile(`${dirName}/${changedTime}.txt`, content, (err) => {
-//         if (err) {
-//             console.error("Error writing file:", err);
-//             res.status(500).send('Error in writing the file');
-//             return;
-//         }
-//         res.sendFile(path.join(dirName, `${changedTime}.txt`));
-//     });
-    
-// })    
-
-
-
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port like ${PORT}`);
-//   });        // Here, app.listen used to start the express server and listen in port,callback fn execute if server is up and running
+// SetUp
+// mkdir file-system-api-Day39
+// cd file-system-api-Day39
+// npm init -y  //New project initialize with NPM
+// npm install express
 
 //? Thirty Party Packages..
 const express = require("express");
